@@ -63,7 +63,6 @@ def gpu_operation(vector_a,vector_b, results_gpu,binary_kernel, VECTOR_LEN):
 	#pycuda.driver.device_attribute.MAX_THREADS_PER_BLOCK
 	bdim = (MAX_BLOCK_DIM_X, 1, 1)
 
-
 	dx, mx = divmod(VECTOR_LEN, bdim[0])
 	#dy, my = divmod(1, bdim[1])
 	
@@ -185,6 +184,7 @@ def compare_cpu_vs_gpu_operations(length):
 if __name__ == "__main__":
 
 	while 1:
+
 		length=input_vector_len()
 	
 		#length=8000
